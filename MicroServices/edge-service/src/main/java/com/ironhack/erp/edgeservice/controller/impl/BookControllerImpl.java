@@ -17,11 +17,13 @@ public class BookControllerImpl implements BookControllerInterface {
     BookService bookService;
 
     @GetMapping("/books")
+    @ResponseStatus(HttpStatus.OK)
     public List<BookViewModel> findAll() {
         return bookService.findAll();
     }
 
     @GetMapping("/books/{id}")
+    @ResponseStatus(HttpStatus.OK)
     public BookViewModel findById(@PathVariable Long id) {
         return bookService.findById(id);
     }

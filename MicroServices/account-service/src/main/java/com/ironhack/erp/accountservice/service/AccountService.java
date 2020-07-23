@@ -34,6 +34,7 @@ public class AccountService {
 
     public void setCredit(Long id, BigDecimal credit) throws Exception {
         Account target = accountRepository.findById(id).orElseThrow(()-> new NotFoundException("Account with id: "+ id + " not found"));
+        target.setCredit(credit);
         if (target.getCredit().intValue() < 1) {
             throw new Exception("Operation not allowed. Not enough credit.");
         } else {
