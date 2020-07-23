@@ -1,8 +1,9 @@
-package com.ironhack.erp.clientservice.controller.impl;
+package com.ironhack.erp.edgeservice.controller.impl;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.ironhack.erp.clientservice.model.entities.Client;
-import com.ironhack.erp.clientservice.repository.ClientRepository;
+import com.ironhack.erp.edgeservice.client.ClientClient;
+import com.ironhack.erp.edgeservice.model.dto.ClientDto;
+import com.ironhack.erp.edgeservice.model.viewModel.ClientViewModel;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,23 +26,24 @@ class ClientControllerImplTest {
     ClientControllerImpl clientController;
 
     @MockBean
-    ClientRepository clientRepository;
+    ClientClient clientClient;
 
     @Autowired
     private WebApplicationContext webApplicationContext;
     private MockMvc mockMvc;
     private final ObjectMapper objectMapper = new ObjectMapper();
 
-    Client client;
+    ClientDto clientDto;
+    ClientViewModel clientViewModel;
 
     @BeforeEach
     void setUp() {
         mockMvc = MockMvcBuilders.webAppContextSetup(webApplicationContext).build();
-        client = new Client(null, null, null, null, null, null);
+        clientDto = new ClientDto(null, null, null, null, null, null);
 
-        when(clientRepository.findAll()).thenReturn(Arrays.asList(client));
-        when(clientRepository.findById((long) 1)).thenReturn(java.util.Optional.ofNullable(client));
-        when(clientRepository.save(client)).thenReturn(client);
+        when(clientClient.findAll()).thenReturn(Arrays.asList(clientViewModel));
+        when(clientClient.findById((long) 1)).thenReturn(clientViewModel);
+        when(clientClient.createClient(clientDto)).thenReturn(clientViewModel);
     }
 
     @Test
@@ -58,7 +60,7 @@ class ClientControllerImplTest {
     @Test
     void createClient() throws Exception{
         mockMvc.perform(post("/clients")
-                .content(objectMapper.writeValueAsString(client))
+                .content(objectMapper.writeValueAsString(clientDto))
                 .contentType(MediaType.APPLICATION_JSON))
                 .andExpect(status().isCreated());
     }
@@ -66,7 +68,7 @@ class ClientControllerImplTest {
     @Test
     void updateClient() throws Exception {
         mockMvc.perform(put("/clients/1")
-                .content(objectMapper.writeValueAsString(client))
+                .content(objectMapper.writeValueAsString(clientDto))
                 .contentType(MediaType.APPLICATION_JSON))
                 .andExpect(status().isCreated());
     }

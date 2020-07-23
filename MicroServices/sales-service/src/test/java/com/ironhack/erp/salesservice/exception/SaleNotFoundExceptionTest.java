@@ -9,7 +9,5 @@ class SaleNotFoundExceptionTest {
     @Test
     void assertThrows() throws SaleNotFoundException {
        new SaleNotFoundException(null);
-
     }
-
 }

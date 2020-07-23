@@ -28,7 +28,7 @@ public class AccountControllerImpl implements AccountControllerInterface {
     }
 
     @PostMapping("/accounts")
-    @ResponseStatus(HttpStatus.OK)
+    @ResponseStatus(HttpStatus.CREATED)
     public AccountViewModel create(@RequestBody AccountDto account) {
         return accountService.create(account);
     }
