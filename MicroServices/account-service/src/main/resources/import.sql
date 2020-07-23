@@ -1,0 +1,1 @@
+INSERT INTO accounts (id, owner_id, owner_name, credit, is_premium) VALUES (1, 1, 'Jack', 200, 'false');
