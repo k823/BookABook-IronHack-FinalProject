@@ -1,0 +1,72 @@
+<mat-card class="main-container">
+    <mat-card-header>
+        <mat-card-title>
+            <h1>
+                <mat-icon>receipt</mat-icon> {{ pageTitle }}
+            </h1>
+        </mat-card-title>
+    </mat-card-header>
+
+    <mat-toolbar-row>
+        <mat-toolbar-row>
+            <div matTooltip="You're not Admin!" [matTooltipDisabled]="isAdmin">
+
+            <button mat-flat-button style="margin-right:10px;" color="primary"  
+            [routerLink]="['/sales/create']" 
+            [disabled]="! isAdmin" *ngIf="isAdmin" >
+                New sales <mat-icon>add</mat-icon>
+            </button>
+        </div>
+            <span class="title-spacer"></span>
+            <mat-form-field appearance="standard" class="search-form-fileld">
+                <mat-label>Filter</mat-label>
+                <input matInput (keyup)="applyFilter($event.target.value)">
+                <mat-icon>filter_list</mat-icon>
+            </mat-form-field>
+        </mat-toolbar-row>
+    </mat-toolbar-row>
+
+    <mat-table #table [dataSource]="dataSource" matSort>
+        <ng-container matColumnDef="client">
+            <mat-header-cell *matHeaderCellDef mat-sort-header>Client Id</mat-header-cell>
+            <mat-cell *matCellDef="let sales">{{ sales.client }}</mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="id">
+            <mat-header-cell *matHeaderCellDef mat-sort-header>Sale Id </mat-header-cell>
+            <mat-cell *matCellDef="let sales" class="sale-id">{{ sales.id }}</mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="product">
+            <mat-header-cell *matHeaderCellDef mat-sort-header>Product </mat-header-cell>
+            <mat-cell *matCellDef="let sales">{{ sales.product }}</mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="paymentMethod">
+            <mat-header-cell *matHeaderCellDef mat-sort-header>Payment Method </mat-header-cell>
+            <mat-cell *matCellDef="let sales">{{ sales.paymentMethod | uppercase }}</mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="discount">
+            <mat-header-cell *matHeaderCellDef mat-sort-header>Discount </mat-header-cell>
+            <mat-cell *matCellDef="let sales">{{ sales.discount }}%</mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="total">
+            <mat-header-cell *matHeaderCellDef mat-sort-header>Total </mat-header-cell>
+            <mat-cell *matCellDef="let sales">{{ sales.total }}€</mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="createdAt">
+            <mat-header-cell *matHeaderCellDef mat-sort-header>Purchase Time </mat-header-cell>
+            <mat-cell *matCellDef="let sales">{{ sales.createdAt }}</mat-cell>
+        </ng-container>
+
+
+        <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+        <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+    </mat-table>
+
+    <div class="loading" *ngIf="isLoading || isErrorLoading" style="text-align: center;padding: 20px;">
+        <mat-progress-spinner mode="indeterminate" *ngIf="isLoading" style="margin: 0 auto;"></mat-progress-spinner>
+        <div *ngIf="isErrorLoading">
+            <mat-card-title>The server is taking longer than usual to respond 😥</mat-card-title>
+            <mat-card-subtitle>Please try again later</mat-card-subtitle>
+        </div>
+    </div>
+
+</mat-card>

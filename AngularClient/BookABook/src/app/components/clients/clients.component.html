@@ -1,0 +1,72 @@
+<mat-card class="main-container">
+    <mat-card-header>
+        <mat-card-title>
+            <h1>
+                <mat-icon>people_alt</mat-icon> {{ pageTitle }}
+            </h1>
+        </mat-card-title>
+    </mat-card-header>
+
+    <mat-toolbar-row>
+        <mat-toolbar-row>
+            <div matTooltip="You're not Admin!" [matTooltipDisabled]="isAdmin">
+
+            <button mat-flat-button style="margin-right:10px;" color="primary"  
+            [routerLink]="['/client/create']" 
+            [disabled]="! isAdmin" *ngIf="isAdmin" >
+                New client <mat-icon>add</mat-icon>
+            </button>
+        </div>
+            <span class="title-spacer"></span>
+            <mat-form-field appearance="standard" class="search-form-fileld">
+                <mat-label>Filter</mat-label>
+                <input matInput (keyup)="applyFilter($event.target.value)">
+                <mat-icon>filter_list</mat-icon>
+            </mat-form-field>
+        </mat-toolbar-row>
+    </mat-toolbar-row>
+
+    <mat-table #table [dataSource]="dataSource" matSort>
+        <ng-container matColumnDef="id">
+            <mat-header-cell *matHeaderCellDef mat-sort-header>Id </mat-header-cell>
+            <mat-cell *matCellDef="let client">{{ client.id | number }}</mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="name">
+            <mat-header-cell *matHeaderCellDef mat-sort-header>Name </mat-header-cell>
+            <mat-cell *matCellDef="let client">{{ client.name }}</mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="telNumber">
+            <mat-header-cell *matHeaderCellDef mat-sort-header>Phone Number </mat-header-cell>
+            <mat-cell *matCellDef="let client">{{ client.telNumber }}</mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="email">
+            <mat-header-cell *matHeaderCellDef mat-sort-header>Email </mat-header-cell>
+            <mat-cell *matCellDef="let client">{{ client.email }}</mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="address">
+            <mat-header-cell *matHeaderCellDef mat-sort-header>Address </mat-header-cell>
+            <mat-cell *matCellDef="let client">{{ client.address }}</mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="zipCode">
+            <mat-header-cell *matHeaderCellDef mat-sort-header>Zip Code </mat-header-cell>
+            <mat-cell *matCellDef="let client">{{ client.zipCode }}</mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="credit">
+            <mat-header-cell *matHeaderCellDef mat-sort-header>Credit </mat-header-cell>
+            <mat-cell *matCellDef="let client">{{ client.credit }}</mat-cell>
+        </ng-container>
+
+
+        <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+        <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+    </mat-table>
+
+    <div class="loading" *ngIf="isLoading || isErrorLoading" style="text-align: center;padding: 20px;">
+        <mat-progress-spinner mode="indeterminate" *ngIf="isLoading" style="margin: 0 auto;"></mat-progress-spinner>
+        <div *ngIf="isErrorLoading">
+            <mat-card-title>The server is taking longer than usual to respond 😥</mat-card-title>
+            <mat-card-subtitle>Please try again later</mat-card-subtitle>
+        </div>
+    </div>
+
+</mat-card>

@@ -1,0 +1,45 @@
+<div class="example-container" [class.example-is-mobile]="mobileQuery.matches" *ngIf="shouldRun">
+    <mat-toolbar color="primary" class="example-toolbar">
+        <button mat-flat-button color="primary" (click)="snav.toggle()">
+            <mat-icon>menu</mat-icon>
+        </button>
+        <h1 class="example-app-name" [routerLink]="(['home'])">BOOKABOOK</h1>
+        <button mat-flat-button color="primary" (click)="logout()">
+            <mat-icon>exit_to_app</mat-icon> Log-out
+        </button>
+    </mat-toolbar>
+
+    <mat-sidenav-container *ngIf="display" class="example-sidenav-container" [style.marginTop.px]="mobileQuery.matches ? 56 : 0">
+        <mat-sidenav opened="true" #snav [mode]="mobileQuery.matches ? 'over' : 'side'"
+            [fixedInViewport]="mobileQuery.matches" fixedTopGap="56">
+            <mat-nav-list>
+                <a class="a-link" mat-list-item [routerLink]="nav.route" *ngFor="let nav of fillerNavAdmin">
+                    <mat-icon class="a-icon">{{ nav.icon }}</mat-icon>
+                    {{ nav.name }}
+                </a>
+            </mat-nav-list>
+        </mat-sidenav>
+
+        <mat-sidenav-content>
+            <router-outlet></router-outlet>
+        </mat-sidenav-content>
+    </mat-sidenav-container>
+    <mat-sidenav-container *ngIf="!display" class="example-sidenav-container" [style.marginTop.px]="mobileQuery.matches ? 56 : 0">
+        <mat-sidenav opened="true" #snav [mode]="mobileQuery.matches ? 'over' : 'side'"
+            [fixedInViewport]="mobileQuery.matches" fixedTopGap="56">
+            <mat-nav-list>
+                <a class="a-link" mat-list-item [routerLink]="nav.route" *ngFor="let nav of fillerNavCommon">
+                    <mat-icon class="a-icon">{{ nav.icon }}</mat-icon>
+                    {{ nav.name }}
+                </a>
+            </mat-nav-list>
+        </mat-sidenav>
+
+        <mat-sidenav-content>
+            <router-outlet></router-outlet>
+        </mat-sidenav-content>
+    </mat-sidenav-container>
+</div>
+<div class="background">
+    <div class="background-image"></div>
+</div>

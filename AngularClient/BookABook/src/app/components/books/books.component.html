@@ -1,0 +1,76 @@
+<mat-card class="main-container">
+    <mat-card-header>
+        <mat-card-title>
+            <h1>
+                <mat-icon>import_contacts</mat-icon> {{ pageTitle }}
+            </h1>
+        </mat-card-title>
+    </mat-card-header>
+
+    <mat-toolbar-row>
+        <mat-toolbar-row>
+            <div matTooltip="You're not Admin!" [matTooltipDisabled]="isAdmin">
+
+            <button mat-flat-button style="margin-right:10px;" color="primary"  
+            [routerLink]="['/book/create']" 
+            [disabled]="! isAdmin" *ngIf="isAdmin" >
+                New book <mat-icon>add</mat-icon>
+            </button>
+        </div>
+            <span class="title-spacer"></span>
+            <mat-form-field appearance="standard" class="search-form-fileld">
+                <mat-label>Filter</mat-label>
+                <input matInput (keyup)="applyFilter($event.target.value)">
+                <mat-icon>filter_list</mat-icon>
+            </mat-form-field>
+        </mat-toolbar-row>
+    </mat-toolbar-row>
+
+    <mat-table #table [dataSource]="dataSource" matSort>
+        <ng-container matColumnDef="img">
+            <mat-header-cell *matHeaderCellDef mat-sort-header> </mat-header-cell>
+            <mat-cell *matCellDef="let book"><img src="{{ book.img }}" alt="img"></mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="id">
+            <mat-header-cell *matHeaderCellDef mat-sort-header>Id </mat-header-cell>
+            <mat-cell *matCellDef="let book">{{ book.id | number }}</mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="name">
+            <mat-header-cell *matHeaderCellDef mat-sort-header>Title </mat-header-cell>
+            <mat-cell *matCellDef="let book">{{ book.name }}</mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="author">
+            <mat-header-cell *matHeaderCellDef mat-sort-header>Author </mat-header-cell>
+            <mat-cell *matCellDef="let book">{{ book.author }}</mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="ean">
+            <mat-header-cell *matHeaderCellDef mat-sort-header>Ean </mat-header-cell>
+            <mat-cell *matCellDef="let book">{{ book.ean }}</mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="price">
+            <mat-header-cell *matHeaderCellDef mat-sort-header>Price </mat-header-cell>
+            <mat-cell *matCellDef="let book">{{ book.price }}</mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="stock">
+            <mat-header-cell *matHeaderCellDef mat-sort-header>Stock </mat-header-cell>
+            <mat-cell *matCellDef="let book">{{ book.stock }}</mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="buy">
+            <mat-header-cell *matHeaderCellDef mat-sort-header>Buy </mat-header-cell>
+            <mat-cell *matCellDef="let book"><button mat-raised-button color="primary" (click)="buyBook(book)">Buy</button></mat-cell>
+        </ng-container>
+
+        <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+        <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+    </mat-table>
+
+    <div class="loading" *ngIf="isLoading || isErrorLoading" style="text-align: center;padding: 20px;">
+        <mat-progress-spinner mode="indeterminate" *ngIf="isLoading" style="margin: 0 auto;"></mat-progress-spinner>
+        <div *ngIf="isErrorLoading">
+            <mat-card-title>The server is taking longer than usual to respond 😥</mat-card-title>
+            <mat-card-subtitle>Please try again later</mat-card-subtitle>
+        </div>
+    </div>
+
+</mat-card>

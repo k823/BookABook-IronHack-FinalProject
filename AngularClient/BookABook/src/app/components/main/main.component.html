@@ -1,0 +1,45 @@
+<div class="main-container">
+    <mat-card>
+            <mat-card-title>
+                Welcome, <span>{{ user }}</span>!
+            </mat-card-title>
+            <mat-card-subtitle>
+                What would you like to do today?
+            </mat-card-subtitle>
+    </mat-card>
+
+        <mat-card *ngIf="isAdmin" [routerLink]="['/clients']" class="card-item">
+            <mat-card-title>
+                <mat-icon>people_alt</mat-icon>
+            </mat-card-title>
+            <mat-card-subtitle>Clients</mat-card-subtitle>
+        </mat-card>
+    
+        <mat-card *ngIf="isAdmin" [routerLink]="['/accounts']" class="card-item">
+            <mat-card-title>
+                <mat-icon>card_giftcard</mat-icon>
+            </mat-card-title>
+            <mat-card-subtitle>Accounts</mat-card-subtitle>
+        </mat-card>
+    
+        <mat-card [routerLink]="['/books']" class="card-item">
+            <mat-card-title>
+                <mat-icon>import_contacts</mat-icon>
+            </mat-card-title>
+            <mat-card-subtitle>Books</mat-card-subtitle>
+        </mat-card>
+    
+        <mat-card *ngIf="isAdmin" [routerLink]="['/dashboard']" class="card-item">
+            <mat-card-title>
+                <mat-icon>analytics</mat-icon>
+            </mat-card-title>
+            <mat-card-subtitle>Dashboard</mat-card-subtitle>
+        </mat-card>
+    
+        <mat-card *ngIf="isAdmin" [routerLink]="['/sales']" class="card-item">
+            <mat-card-title>
+                <mat-icon>receipt</mat-icon>
+            </mat-card-title>
+            <mat-card-subtitle>Sales</mat-card-subtitle>
+        </mat-card>
+</div>

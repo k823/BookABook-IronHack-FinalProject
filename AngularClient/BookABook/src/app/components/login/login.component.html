@@ -1,0 +1,26 @@
+<mat-card class="form">
+    <form class="example-form" [formGroup]="loginForm" (ngSubmit)="login()">
+      <p class="logo">
+        <h1 class="title">BOOKABOOK</h1>
+      <mat-form-field class="example-full-width">
+        <mat-label>Username</mat-label>
+        <input matInput name="username" formControlName="username">
+      </mat-form-field>
+  
+      <mat-form-field class="example-full-width">
+        <mat-label>Password</mat-label>
+        <input type="password" matInput name="password" formControlName="password">
+      </mat-form-field>
+  
+      <button mat-flat-button color="primary" [disabled]="loginForm.invalid" *ngIf="! isLogin">LOGIN</button>
+      <button mat-flat-button color="primary" style="text-align: center;" *ngIf="isLogin">
+        <mat-progress-spinner class="white-spinner" mode="indeterminate" color="accent" diameter="25"></mat-progress-spinner>
+      </button>
+  
+    </form>
+  </mat-card>
+  
+  <div class="background">
+    <div class="background-image" style="background-image: url('/assets/img/bgimg.png');">
+    </div>
+  </div>

@@ -1,0 +1,50 @@
+.main-container {
+    height: 100%;
+    background-color: rgb(39, 161, 170);
+  }
+  
+  mat-table {
+    border-radius: 10px;
+  }
+  
+  mat-header-cell {
+    color: white;
+    border-radius: 10px;
+  }
+  
+  mat-header-row {
+    border-radius: 10px 10px 0 0;
+  }
+  
+  mat-cell {
+    color: black;
+  }
+  
+  mat-cell img {
+    max-width: 80px;
+    border-radius: 10px;
+  }
+  
+  mat-row {
+    border-radius: 10px;
+  }
+  
+  .title-spacer {
+    flex: 1 1 auto;
+  }
+  
+  .search-form-fileld {
+    margin-right: 20px;
+  }
+  
+  mat-row:nth-child(even) {
+    background-color: #f9f7fc;
+  }
+  
+  button mat-icon {
+    margin-left: 10px;
+  }
+  
+  h1 mat-icon {
+    margin: 0 10px;
+  }
