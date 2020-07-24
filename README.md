@@ -18,6 +18,8 @@
 
 * [Angular](#angular)
 
+* [Snapshots](#snapshots)
+
 
 ## <a name="goal"></a>Goal
 The Goal of this project is making a recap of all the contents seen throughout the course. To do so, we will have to implement Spring Microservices as the backend, allowing to use a distributed system architecture, which improves efficiency, scalability and computing power. And implementing Angular for the User Interface. The proposal for this application is a small software for buying books, although is a pretty standard proposal, the project has plenty of room for growing as needed. And the main focus is making a secure, robust and scalable application.
@@ -152,3 +154,24 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
 
+## <a name="snapshots"></a>Snapshots
+
+### LOGIN 
+
+<a href="https://ibb.co/3Nm82KJ"><img src="https://i.ibb.co/mq5Ykpx/Captura-de-pantalla-de-2020-07-24-18-54-09.png" alt="Captura-de-pantalla-de-2020-07-24-18-54-09" border="0"></a>
+
+### ADMIN
+
+<a href="https://ibb.co/CJknSsz"><img src="https://i.ibb.co/pWt3krx/Captura-de-pantalla-de-2020-07-24-18-12-55.png" alt="Captura-de-pantalla-de-2020-07-24-18-12-55" border="0"></a>
+
+<a href="https://ibb.co/gWxgY12"><img src="https://i.ibb.co/5jPcZD0/Captura-de-pantalla-de-2020-07-24-18-35-40.png" alt="Captura-de-pantalla-de-2020-07-24-18-35-40" border="0"></a>
+
+<a href="https://ibb.co/7NtBL6L"><img src="https://i.ibb.co/4gRC353/Captura-de-pantalla-de-2020-07-24-18-36-44.png" alt="Captura-de-pantalla-de-2020-07-24-18-36-44" border="0"></a>
+
+### CLIENT
+
+<a href="https://ibb.co/K9RFzxN"><img src="https://i.ibb.co/Vvr2pYH/Captura-de-pantalla-de-2020-07-24-18-37-46.png" alt="Captura-de-pantalla-de-2020-07-24-18-37-46" border="0"></a>
+
+<a href="https://ibb.co/fHGShwQ"><img src="https://i.ibb.co/vkvB7nD/Captura-de-pantalla-de-2020-07-24-18-37-35.png" alt="Captura-de-pantalla-de-2020-07-24-18-37-35" border="0"></a><br /><a target='_blank' href='https://imgbb.com/'>editar img</a><br />
+
+Thanks! :D
