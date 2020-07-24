@@ -14,9 +14,9 @@
 
 * [Test Coverage](#test-coverage)
 
-* [**Deployment**](#deployment)
+* [Deployment](#deployment)
 
-* [**Angular**](#angular)
+* [Angular](#angular)
 
 
 ## <a name="goal"></a>Goal
