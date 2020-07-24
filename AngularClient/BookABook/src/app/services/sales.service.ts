@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
 })
 export class SalesService {
 
-  private urlEndpoint = 'http://localhost:8080/sales';
+  private urlEndpoint = 'https://sales-bookabook.herokuapp.com/';
 
   httpHeaders = new HttpHeaders({
     'Content-Type': 'application/json'

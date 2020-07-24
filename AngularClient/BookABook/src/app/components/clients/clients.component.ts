@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { HttpHeaders } from '@angular/common/http';
 import { ClientService } from 'src/app/services/client.service';
 import { AuthUtils } from 'src/app/utils/auth-utils';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-clients',
@@ -21,10 +22,14 @@ export class ClientsComponent implements OnInit {
   displayedColumns = ['id', 'name', 'telNumber', 'email', 'address', 'zipCode', 'credit'];
 
   constructor(
-    private clientService: ClientService
+    private clientService: ClientService,
+    private router: Router
   ) { }
 
   ngOnInit(): void {
+    if (!AuthUtils.isAdmin) {
+      this.router.navigate(['books']);
+    }
     this.isErrorLoading = !(this.isLoading = true);
     this.isAdmin = AuthUtils.isAdmin();
     this.clientService.getClients().subscribe(clients => {

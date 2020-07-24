@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthUtils } from 'src/app/utils/auth-utils';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-main',
@@ -12,9 +13,12 @@ export class MainComponent implements OnInit {
 
   isAdmin = false;
 
-  constructor() { }
+  constructor(
+    private router: Router
+  ) { }
 
   ngOnInit(): void {
+    this.router.navigate(['home']);
     this.isAdmin = AuthUtils.isAdmin();
   }
 

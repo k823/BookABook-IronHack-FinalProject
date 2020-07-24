@@ -8,12 +8,11 @@ import { Router } from '@angular/router';
 @Injectable()
 export class BookService {
 
-  private urlEndpoint = 'http://localhost:8080/books';
+  private urlEndpoint = 'https://books-bookabook.herokuapp.com/';
 
   httpOptions = {
     headers: new HttpHeaders({
-      'Content-Type': 'application/json',
-      Authorization: 'Basic ' + btoa('client:client')
+      'Content-Type': 'application/json'
     })
   };
 
@@ -23,7 +22,7 @@ export class BookService {
   ) { }
 
   getBooks(): Observable<Book[]> {
-    return this.http.get<Book[]>(this.urlEndpoint);
+    return this.http.get<Book[]>(this.urlEndpoint, this.httpOptions);
   }
 
 }

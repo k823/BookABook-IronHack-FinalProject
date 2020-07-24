@@ -8,6 +8,8 @@ import { ClientsComponent } from './components/clients/clients.component';
 import { SalesComponent } from './components/sales/sales.component';
 import { AccountsComponent } from './components/accounts/accounts.component';
 import { AuthUtils } from './utils/auth-utils';
+import { NotFoundComponent } from './components/not-found/not-found.component';
+import { RegisterComponent } from './components/register/register.component';
 
 
 const routes: Routes = [
@@ -19,6 +21,10 @@ const routes: Routes = [
     path: '',
     component: NavbarComponent,
     children: [
+      {
+        path: '',
+        component: MainComponent,
+      },
       {
         path: 'books',
         component: BooksComponent,
@@ -37,14 +43,26 @@ const routes: Routes = [
         component: MainComponent
       },
       {
-        path: 'accounts',
-        component: AccountsComponent
+        path: 'main',
+        component: MainComponent
       },
       {
-        path: '**',
-        component: MainComponent
+        path: 'accounts',
+        component: AccountsComponent
       }
     ]
+  },
+  {
+    path: 'register',
+    component: RegisterComponent
+  },
+  {
+    path: 'not-found',
+    component: NotFoundComponent
+  },
+  {
+    path: '**',
+    component: NotFoundComponent
   }
 ];
 

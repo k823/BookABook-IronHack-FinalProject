@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpHeaders } from '@angular/common/http';
 import { AccountService } from '../../services/account.service';
+import { AuthUtils } from 'src/app/utils/auth-utils';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-accounts',
@@ -24,10 +26,14 @@ export class AccountsComponent implements OnInit {
   });
 
   constructor(
-    private accountService: AccountService
+    private accountService: AccountService,
+    private router: Router
   ) { }
 
   ngOnInit(): void {
+    if (!AuthUtils.isAdmin()) {
+      this.router.navigate(['books']);
+    }
     this.isErrorLoading = !(this.isLoading = true);
     // this.isAdmin = AuthUtils.isAdmin();
     this.accountService.getAccounts().subscribe(accounts => {

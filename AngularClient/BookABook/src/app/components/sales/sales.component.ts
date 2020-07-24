@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { SalesService } from '../../services/sales.service';
+import { AuthUtils } from 'src/app/utils/auth-utils';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-sales',
@@ -19,10 +21,14 @@ export class SalesComponent implements OnInit {
   displayedColumns = ['id', 'client', 'product', 'paymentMethod', 'discount', 'total', 'createdAt'];
 
   constructor(
-    private salesService: SalesService
+    private salesService: SalesService,
+    private router: Router
   ) { }
 
   ngOnInit(): void {
+    if (!AuthUtils.isAdmin()) {
+      this.router.navigate(['books']);
+    }
     this.isErrorLoading = !(this.isLoading = true);
     // this.isAdmin = AuthUtils.isAdmin();
     this.salesService.getSales().subscribe(clients => {

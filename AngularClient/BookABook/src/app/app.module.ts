@@ -18,6 +18,8 @@ import { SalesComponent } from './components/sales/sales.component';
 import { AccountsComponent } from './components/accounts/accounts.component';
 import { BookService } from './services/books.service';
 import { HttpClientModule } from '@angular/common/http';
+import { NotFoundComponent } from './components/not-found/not-found.component';
+import { RegisterComponent } from './components/register/register.component';
 
 
 
@@ -31,7 +33,9 @@ import { HttpClientModule } from '@angular/common/http';
     BooksComponent,
     ClientsComponent,
     SalesComponent,
-    AccountsComponent
+    AccountsComponent,
+    NotFoundComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
