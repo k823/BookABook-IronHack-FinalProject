@@ -104,6 +104,12 @@ All routes have been tested and can be checked either with Postman or Swagger.
 
 The whole application has been deployed in Heroku and is fully working. 
 
+You can access all endpoints in: https://edge-bookabook.herokuapp.com/
+
+<a href="https://ibb.co/kMxX90P"><img src="https://i.ibb.co/FnKz0Jd/Desktop-2.png" alt="Desktop-2" border="0"></a>
+
+<a href="https://ibb.co/FDGzjrJ"><img src="https://i.ibb.co/6W6FfMb/Captura-de-pantalla-de-2020-07-24-11-35-08.png" alt="Captura-de-pantalla-de-2020-07-24-11-35-08" border="0"></a>
+
 ## <a name="angular"></a>Angular
 # BookABook
 
