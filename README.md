@@ -19,7 +19,6 @@
 * [**Angular**](#angular)
 
 
-
 ## <a name="goal"></a>Goal
 The Goal of this project is making a recap of all the contents seen throughout the course. To do so, we will have to implement Spring Microservices as the backend, allowing to use a distributed system architecture, which improves efficiency, scalability and computing power. And implementing Angular for the User Interface. The proposal for this application is a small software for buying books, although is a pretty standard proposal, the project has plenty of room for growing as needed. And the main focus is making a secure, robust and scalable application.
 
@@ -48,6 +47,17 @@ The application has been splitted into the following services:
 #### Overall diagram
 
 <a href="https://ibb.co/fQmBkQt"><img src="https://i.ibb.co/qxbXNx9/BOOKABOOK-Diagram.png" alt="BOOKABOOK-Diagram" border="0"></a>
+
+
+## <a name="tools"></a>Tools
+- IntelliJ (Compile and run Java Program, JDK 11)
+- VSCode (Angular App)
+- Spring Boot and Spring Cloud Netflix Dependencies
+- MySQL
+- MongoDB
+- Postman
+- Swagger (API Document with HTML)
+- Drawio (Draw User Case Diagram and Class Diagram)
 
 ## <a name="how-it-works"></a>How it works
 
