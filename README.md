@@ -98,7 +98,7 @@ If you are making the requests through Postman, you must set Authorization Type 
 ## <a name="test-coverage"></a>Test Coverage
 * In the **Java Program** in IntelliJ our test coverage is displayed below by services: 
 
-<a href="https://ibb.co/cT5CstN"><img src="https://i.ibb.co/XJB3Gpz/Desktop-1.png" alt="Desktop-1" border="0"></a>
+<a href="https://ibb.co/7XLKxMG"><img src="https://i.ibb.co/9NSWmKq/Desktop-1.png" alt="Desktop-1" border="0"></a><br /><a target='_blank' href='https://imgbb.com/'>paste face on picture online</a><br />
 
 You can check all the unit and integration tests in each project by clicking "Run all tests with Coverage" in the main folder once opened in IntelliJ. 
 
