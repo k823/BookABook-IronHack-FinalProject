@@ -27,6 +27,7 @@ mat-cell img {
 
 mat-row {
   border-radius: 10px;
+  background-color: rgb(169, 172, 172);
 }
 
 .title-spacer {
@@ -38,7 +39,7 @@ mat-row {
 }
 
 mat-row:nth-child(even) {
-  background-color: #f9f7fc;
+  background-color: #dadada;
 }
 
 button mat-icon {

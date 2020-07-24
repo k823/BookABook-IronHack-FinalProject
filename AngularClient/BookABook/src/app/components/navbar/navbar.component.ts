@@ -64,8 +64,8 @@ export class NavbarComponent implements OnDestroy {
       display: this.display
     },
     {
-      name: 'Point of Sale',
-      route: 'pos',
+      name: 'Checkout',
+      route: 'checkout',
       icon: 'point_of_sale',
       display: this.display
     }
@@ -85,8 +85,8 @@ export class NavbarComponent implements OnDestroy {
       display: this.display
     },
     {
-      name: 'Point of Sale',
-      route: 'pos',
+      name: 'Checkout',
+      route: 'checkout',
       icon: 'point_of_sale',
       display: this.display
     }

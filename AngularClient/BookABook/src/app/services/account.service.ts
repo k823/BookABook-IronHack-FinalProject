@@ -13,7 +13,7 @@ import { formatDate, registerLocaleData } from '@angular/common';
 })
 export class AccountService {
 
-  private urlEndpoint = 'https://accounts-bookabook.herokuapp.com/';
+  private urlEndpoint = 'https://edge-bookabook.herokuapp.com/accounts';
 
   httpHeaders = new HttpHeaders({
     'Content-Type': 'application/json'

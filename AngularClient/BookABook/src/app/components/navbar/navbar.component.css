@@ -32,18 +32,22 @@ h1.example-app-name {
     flex: 1 0 auto;
 }
 
+h1 {
+    color: aquamarine;
+}
+
 mat-sidenav {
-    background-color: rgb(12, 133, 106);
     min-width: 235px;
 }
 
 mat-sidenav-content {
     background-color: #f6f6f6;
+    background: url('https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fwallpapercave.com%2Fwp%2FtIYJLNy.jpg&f=1&nofb=1');
 }
 
 mat-toolbar {
     justify-content: space-between;
-    background-color: rgb(27, 148, 108) !important;
+    background-color: rgb(139, 139, 139) !important;
 }
 
 mat-icon {
@@ -51,11 +55,11 @@ mat-icon {
 }
 
 .a-link {
-    color: black;
+    color: white;
 }
 
 .a-icon {
-    color: black;
+    color: white;
 }
 
 .background{

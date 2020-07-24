@@ -15,13 +15,15 @@ export class BooksComponent implements OnInit {
 
   isLoading = true;
   isErrorLoading = false;
-  isAdmin = false;
+  isAdmin: boolean;
+  mySubscription: any;
+
 
   pageTitle = 'Books';
 
   listFilter: any = {};
   dataSource: any = [];
-  displayedColumns = ['img', 'id', 'name', 'author', 'ean', 'price', 'stock', 'buy'];
+  displayedColumns = [];
 
   @Output()
   bookOut = new EventEmitter();
@@ -34,10 +36,19 @@ export class BooksComponent implements OnInit {
   ngOnInit(): void {
     this.isErrorLoading = !(this.isLoading = true);
     this.isAdmin = AuthUtils.isAdmin(),
-    this.bookService.getBooks().subscribe(books => {
-      this.dataSource = books;
-      this.isLoading = false;
-    }, () => this.isLoading = !(this.isErrorLoading = true));
+      this.bookService.getBooks().subscribe(books => {
+        this.dataSource = books;
+        this.isLoading = false;
+      }, () => this.isLoading = !(this.isErrorLoading = true));
+    this.displayedColumns = this.checkDisplayedColumns();
+  }
+
+
+  // tslint:disable-next-line: use-lifecycle-interface
+  ngOnDestroy(): void {
+    if (this.mySubscription) {
+      this.mySubscription.unsubscribe();
+    }
   }
 
 
@@ -50,6 +61,25 @@ export class BooksComponent implements OnInit {
   buyBook(book: Book): void {
     this.bookOut.emit(book);
     this.router.navigate(['checkout']);
+  }
+
+  editBook(book: Book): void {
+    this.bookOut.emit(book);
+    this.router.navigate(['books/create']);
+  }
+
+  delete(id: number): void {
+    this.bookService.delete(id).subscribe(res => {
+      this.router.navigated = false;
+    }, err => {
+      this.router.navigated = false;
+    });
+  }
+
+  checkDisplayedColumns(): string[] {
+    console.log(this.isAdmin);
+    // tslint:disable-next-line: max-line-length
+    return this.displayedColumns = this.isAdmin ? ['img', 'id', 'name', 'author', 'ean', 'price', 'stock', 'edit', 'delete', 'buy'] : ['img', 'name', 'author', 'ean', 'price', 'stock', 'buy'];
   }
 
 }

@@ -1,0 +1,72 @@
+<form novalidate [formGroup]="bookForm">
+
+    <mat-card>
+
+        <mat-toolbar-row>
+            <mat-toolbar-row>
+                <span class="view-card-title"><h1> <mat-icon>book</mat-icon> {{ pageTitle }} </h1></span>
+                <span class="title-spacer"></span>
+                <mat-card-actions>
+                    <button [disabled]="bookForm.invalid" mat-mini-fab color="primary" class="" style="margin-right:10px;" (click)="createBook()">
+                        <mat-icon>save</mat-icon>
+                    </button>
+                    <button mat-mini-fab color="primary" class="" style="margin-right:10px; " [routerLink]="['/books']">
+                        <mat-icon>close</mat-icon>
+                    </button>
+
+                </mat-card-actions>
+
+            </mat-toolbar-row>
+        </mat-toolbar-row>
+
+        <mat-card-content style="margin: 5 0 5 10px;">
+
+            <mat-grid-list cols="12" rowHeight="120px">
+                <mat-grid-tile [colspan]="fieldColspan">
+                </mat-grid-tile>
+            </mat-grid-list>
+            <div class="form-card">
+                <mat-grid-list cols="12" rowHeight="80px">
+                    <mat-grid-tile [colspan]="fieldColspan">
+                        <mat-form-field class="form-field" appearance="outline">
+                            <mat-label>Name</mat-label>
+                            <input matInput id="name" type="text" placeholder="Ex. The Lord of the Rings" formControlName="name"/>
+                        </mat-form-field>
+                    </mat-grid-tile>
+                    <mat-grid-tile [colspan]="fieldColspan">
+                        <mat-form-field class="form-field" appearance="outline">
+                            <mat-label>Author</mat-label>
+                            <input matInput id="author" type="text" placeholder="Ex. J.R.R. Tolkien"
+                                formControlName="author" />
+                        </mat-form-field>
+                    </mat-grid-tile>
+                    <mat-grid-tile [colspan]="fieldColspan">
+                        <mat-form-field class="form-field" appearance="outline">
+                            <mat-label>Ean</mat-label>
+                            <input matInput id="ean" type="text" placeholder="Ex. ABC999999"
+                                formControlName="ean" />
+                        </mat-form-field>
+                    </mat-grid-tile>
+                    <mat-grid-tile [colspan]="fieldColspan">
+                        <mat-form-field class="form-field" appearance="outline">
+                            <mat-label>Price</mat-label>
+                            <input matInput id="price" type="text" placeholder="Ex. 29.99"
+                                formControlName="price" />
+                        </mat-form-field>
+                    </mat-grid-tile>
+                    <mat-grid-tile [colspan]="fieldColspan">
+                        <mat-form-field class="form-field" appearance="outline">
+                            <mat-label>Stock</mat-label>
+                            <input matInput id="stock" type="text" placeholder="Ex. 10"
+                                formControlName="stock" />
+                        </mat-form-field>
+                    </mat-grid-tile>
+                    
+                </mat-grid-list>
+
+            </div>
+
+        </mat-card-content>
+
+    </mat-card>
+</form>

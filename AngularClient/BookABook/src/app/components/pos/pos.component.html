@@ -1,0 +1,52 @@
+<div class="pos">
+    <div class="left-wrapper">
+        <div class="search-bar">
+            <i class="material-icons">search</i>
+            <input type="text" name="products" value={{searchInput}} onChange={this.handleChange}
+                placeholder="Buscar producto por EAN o Nombre..." autoFocus />
+        </div>
+        <div class="list-labels">
+            <p class="label ean">EAN</p>
+            <p class="label name">NOMBRE</p>
+            <p class="label stock">STOCK</p>
+            <p class="label pvp">P.V.P.</p>
+        </div>
+        <div class="list">
+            <div class="list-item" *ngFor="let product of books" (click)="addToBasket(product)">
+                <p class=" ean">{{product.ean}}</p>
+                <p class="name">{{product.name}}</p>
+                <p class="stock">{{product.stock}}</p>
+                <p class="pvp">{{product.price}} €</p>
+            </div>
+        </div>
+    </div>
+    <div class="right-wrapper">
+        <div class="search-bar">
+            <i class="material-icons">keyboard_arrow_down</i>
+            <select name="client" value=this.state.clientSearchInput>
+                <option default>Añadir un cliente</option>
+                <option *ngFor="let client of clients" data-id={{client.id}}>{{client.id}}</option>
+            </select>
+        </div>
+        <div class="list-labels right">
+            <p class="label basket"> Artículos: {{bookQty}} | Total: {{total}} € | {{totalTax}} € I.V.A</p>
+        </div>
+        <div class="list basket-wrapper">
+            <div class="list-item right" *ngFor="let product of basket">
+                <div class="quantity-wrapper">
+                    <mat-icon (click)="addQtyBasket(product)">add_circle_outline</mat-icon>
+                    <p class="qty">{{product.qty}}</p>
+                    <mat-icon (click)="subtractQtyBasket(product)">remove_circle_outline</mat-icon>
+                </div>
+                <p class="name">{{product.name}}</p>
+                <p class="pvp">{{product.total}} €</p>
+                <mat-icon (click)="deleteBookBasket(product)">delete</mat-icon>
+            </div>
+        </div>
+        <div class="pay-zone">
+            <div class="pay-button button" [routerLink]="['/pos/payment']">
+                <p>PAGAR: {{total}} €</p>
+            </div>
+        </div>
+    </div>
+</div>

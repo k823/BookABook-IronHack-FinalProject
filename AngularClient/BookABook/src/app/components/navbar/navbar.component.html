@@ -1,10 +1,7 @@
 <div class="example-container" [class.example-is-mobile]="mobileQuery.matches" *ngIf="shouldRun">
     <mat-toolbar color="primary" class="example-toolbar">
-        <button mat-flat-button color="primary" (click)="snav.toggle()">
-            <mat-icon>menu</mat-icon>
-        </button>
         <h1 class="example-app-name" [routerLink]="(['home'])">BOOKABOOK</h1>
-        <button mat-flat-button color="primary" (click)="logout()">
+        <button mat-flat-button color="accent" (click)="logout()">
             <mat-icon>exit_to_app</mat-icon> Log-out
         </button>
     </mat-toolbar>

@@ -12,7 +12,7 @@
             <div matTooltip="You're not Admin!" [matTooltipDisabled]="isAdmin">
 
             <button mat-flat-button style="margin-right:10px;" color="primary"  
-            [routerLink]="['/book/create']" 
+            [routerLink]="['/books/create']" 
             [disabled]="! isAdmin" *ngIf="isAdmin" >
                 New book <mat-icon>add</mat-icon>
             </button>
@@ -59,6 +59,16 @@
         <ng-container matColumnDef="buy">
             <mat-header-cell *matHeaderCellDef mat-sort-header>Buy </mat-header-cell>
             <mat-cell *matCellDef="let book"><button mat-raised-button color="primary" (click)="buyBook(book)">Buy</button></mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="edit">
+            <mat-header-cell *matHeaderCellDef mat-sort-header>Edit </mat-header-cell>
+            <mat-cell *matCellDef="let book"><button mat-raised-button color="accent" (click)="editBook(book)">Edit</button></mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="delete">
+            <mat-header-cell *matHeaderCellDef mat-sort-header>Delete </mat-header-cell>
+            <mat-cell *matCellDef="let book"><button mat-raised-button color="accent" (click)="delete(book.id)">Delete</button></mat-cell>
         </ng-container>
 
         <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>

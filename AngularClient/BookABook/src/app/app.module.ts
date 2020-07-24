@@ -20,6 +20,8 @@ import { BookService } from './services/books.service';
 import { HttpClientModule } from '@angular/common/http';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { RegisterComponent } from './components/register/register.component';
+import { PosComponent } from './components/pos/pos.component';
+import { CreateBookComponent } from './components/create-book/create-book.component';
 
 
 
@@ -35,7 +37,9 @@ import { RegisterComponent } from './components/register/register.component';
     SalesComponent,
     AccountsComponent,
     NotFoundComponent,
-    RegisterComponent
+    RegisterComponent,
+    PosComponent,
+    CreateBookComponent
   ],
   imports: [
     BrowserModule,

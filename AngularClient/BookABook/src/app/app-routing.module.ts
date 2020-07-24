@@ -10,6 +10,8 @@ import { AccountsComponent } from './components/accounts/accounts.component';
 import { AuthUtils } from './utils/auth-utils';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { RegisterComponent } from './components/register/register.component';
+import { PosComponent } from './components/pos/pos.component';
+import { CreateBookComponent } from './components/create-book/create-book.component';
 
 
 const routes: Routes = [
@@ -27,7 +29,11 @@ const routes: Routes = [
       },
       {
         path: 'books',
-        component: BooksComponent,
+        component: BooksComponent
+      },
+      {
+        path: 'books/create',
+        component: CreateBookComponent
       },
       {
         path: 'clients',
@@ -49,6 +55,10 @@ const routes: Routes = [
       {
         path: 'accounts',
         component: AccountsComponent
+      },
+      {
+        path: 'checkout',
+        component: PosComponent
       }
     ]
   },
