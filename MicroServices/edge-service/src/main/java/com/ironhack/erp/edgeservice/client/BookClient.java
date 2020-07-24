@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@FeignClient("book-service")
+@FeignClient(name = "BOOKS-SERVICE", url = "https://books-bookabook.herokuapp.com")
 public interface BookClient {
 
     @GetMapping("/books")

@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.*;
 import java.math.BigDecimal;
 import java.util.List;
 
-@FeignClient("account-service")
+@FeignClient(name = "ACCOUNTS-SERVICE", url = "https://accounts-bookabook.herokuapp.com")
 public interface AccountClient {
     @GetMapping("/accounts")
     public List<AccountViewModel> findAll();
