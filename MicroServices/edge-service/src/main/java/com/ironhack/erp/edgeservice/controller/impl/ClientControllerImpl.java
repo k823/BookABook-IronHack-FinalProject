@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.*;
 import java.math.BigDecimal;
 import java.util.List;
 
-@Api(tags = "Client Controller")
+@Api(value = "Client Controller")
 @RestController
 @CrossOrigin(origins = "*")
 public class ClientControllerImpl implements ClientControllerInterface {

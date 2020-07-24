@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
 
-@Api(tags = "Auth Controller")
+@Api(value = "Auth Controller")
 @RestController
 @CrossOrigin(origins = "*")
 public class AuthenticationControllerImpl implements AuthenticationControllerInterface {

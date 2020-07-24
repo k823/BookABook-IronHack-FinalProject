@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@Api(tags = "Sales Controller")
+@Api(value = "Sales Controller")
 @RestController
 @CrossOrigin(origins = "*")
 public class SalesControllerImpl implements SalesControllerInterface {

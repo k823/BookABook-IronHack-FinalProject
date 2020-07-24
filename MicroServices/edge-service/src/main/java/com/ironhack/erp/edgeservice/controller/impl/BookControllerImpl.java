@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@Api(tags = "Books Controller")
+@Api(value = "Books Controller")
 @RestController
 @CrossOrigin(origins = "*")
 public class BookControllerImpl implements BookControllerInterface {
