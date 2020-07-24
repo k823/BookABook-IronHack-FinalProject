@@ -1,6 +1,6 @@
-![IronHack Logo](https://s3-eu-west-1.amazonaws.com/ih-materials/uploads/upload_d5c5793015fec3be28a63c4fa3dd4d55.png)
+![IronHack Logo](https://s3-eu-west-1.amazonaws.com/ih-materials/uploads/upload_d5c5793015fec3be28a63c4fa3dd4d55.png) <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fyt3.ggpht.com%2F-ucfOhKHcl_w%2FAAAAAAAAAAI%2FAAAAAAAAAAA%2FmzypJuHb_go%2Fs900-c-k-no%2Fphoto.jpg&f=1&nofb=1" alt="drawing" width="100"/>
 
-# IronHack Final Project - BOOKABOOK
+# IronHack-Santander Final Project - BOOKABOOK
 
 <p align="center"><strong> Jorge Morales </strong></p>
 
@@ -17,7 +17,6 @@
 * [**Deployment**](#deployment)
 
 * [**Angular**](#angular)
-
 
 
 ## <a name="goal"></a>Goal
@@ -49,6 +48,17 @@ The application has been splitted into the following services:
 
 <a href="https://ibb.co/fQmBkQt"><img src="https://i.ibb.co/qxbXNx9/BOOKABOOK-Diagram.png" alt="BOOKABOOK-Diagram" border="0"></a>
 
+
+## <a name="tools"></a>Tools
+- IntelliJ (Compile and run Java Program, JDK 11)
+- VSCode (Angular App)
+- Spring Boot and Spring Cloud Netflix Dependencies
+- MySQL
+- MongoDB
+- Postman
+- Swagger (API Document with HTML)
+- Drawio (Draw User Case Diagram and Class Diagram)
+
 ## <a name="how-it-works"></a>How it works
 
 First of all, in the current page, click the "Code" button and copy the route. 
@@ -71,23 +81,17 @@ If you are making the requests through Postman, you must set Authorization Type 
 
 ## <a name="documentation"></a>Documentation
 
-1. When you enter [THIS LINK](http://localhost:8080/swagger-ui.html) you'll find the following configuration, where all models specifications are displayed and the routes of the requests with their own specifications as well.
+1. When you enter [THIS LINK](https://edge-bookabook.herokuapp.com/swagger-ui.html#/) you'll find the following configuration, where all models specifications are displayed and the routes of the requests with their own specifications as well.
 
-<p align="center">
-<img width="550" height="390" src="https://i.ibb.co/jzQQNYZ/Screenshot-from-2020-06-17-15-46-46.png">
-</p>
+<a href="https://ibb.co/HVVk0q8"><img src="https://i.ibb.co/BttSmBM/Captura-de-pantalla-de-2020-07-24-11-46-55.png" alt="Captura-de-pantalla-de-2020-07-24-11-46-55" border="0"></a>
 
-2. You can see each Request's details, for example for creating a new SalesRep, we can just pass the values desired into their respective place and you can create a new SalesRep, as it can be seen bellow.
+2. You can see each Request's details, for example for creating a new Account, we can just pass the values desired into their respective place and you can create it, as it can be seen bellow.
 
-<p align="center">
-<img width="550" height="390" src="https://i.ibb.co/8X0H4Gk/Screenshot-from-2020-06-17-15-47-25.png">
-</p>
+<a href="https://ibb.co/ZTMmC8N"><img src="https://i.ibb.co/BsCNRZw/Captura-de-pantalla-de-2020-07-24-11-47-05.png" alt="Captura-de-pantalla-de-2020-07-24-11-47-05" border="0"></a>
 
 3. You can also check the details from all model created, as it can be seen bellow for example for the Account Entity.
 
-<p align="center">
-<img width="550" height="390" src="https://i.ibb.co/sPTBZCS/Screenshot-from-2020-06-17-15-47-41.png">
-</p>
+<a href="https://ibb.co/7XTzydV"><img src="https://i.ibb.co/80RB8L2/Captura-de-pantalla-de-2020-07-24-11-49-09.png" alt="Captura-de-pantalla-de-2020-07-24-11-49-09" border="0"></a>
 
 ## <a name="test-coverage"></a>Test Coverage
 * In the **Java Program** in IntelliJ our test coverage is displayed below by services: 
@@ -102,7 +106,22 @@ All routes have been tested and can be checked either with Postman or Swagger.
 
 ## <a name="deployment"></a><strong>Deployment</strong>
 
-The whole application has been deployed in Heroku and is fully working. 
+The whole application backend has been deployed in Heroku and is fully working. 
+
+You can access all endpoints in: https://edge-bookabook.herokuapp.com/
+
+<a href="https://ibb.co/kMxX90P"><img src="https://i.ibb.co/FnKz0Jd/Desktop-2.png" alt="Desktop-2" border="0"></a>
+
+<a href="https://ibb.co/FDGzjrJ"><img src="https://i.ibb.co/6W6FfMb/Captura-de-pantalla-de-2020-07-24-11-35-08.png" alt="Captura-de-pantalla-de-2020-07-24-11-35-08" border="0"></a>
+
+Also, the Angular frontend has been deployed in Google Firebase and is fully functional. 
+
+You can access the app in the following route: 
+
+https://bookabook-7ab98.web.app/login
+
+<a href="https://ibb.co/Fz6VrPQ"><img src="https://i.ibb.co/tDBXGd0/Captura-de-pantalla-de-2020-07-24-12-33-05.png" alt="Captura-de-pantalla-de-2020-07-24-12-33-05" border="0"></a>
+
 
 ## <a name="angular"></a>Angular
 # BookABook
@@ -132,3 +151,4 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
