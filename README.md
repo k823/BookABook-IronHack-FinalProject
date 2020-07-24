@@ -73,21 +73,15 @@ If you are making the requests through Postman, you must set Authorization Type 
 
 1. When you enter [THIS LINK](http://localhost:8080/swagger-ui.html) you'll find the following configuration, where all models specifications are displayed and the routes of the requests with their own specifications as well.
 
-<p align="center">
-<img width="550" height="390" src="https://i.ibb.co/jzQQNYZ/Screenshot-from-2020-06-17-15-46-46.png">
-</p>
+<a href="https://ibb.co/HVVk0q8"><img src="https://i.ibb.co/BttSmBM/Captura-de-pantalla-de-2020-07-24-11-46-55.png" alt="Captura-de-pantalla-de-2020-07-24-11-46-55" border="0"></a>
 
 2. You can see each Request's details, for example for creating a new SalesRep, we can just pass the values desired into their respective place and you can create a new SalesRep, as it can be seen bellow.
 
-<p align="center">
-<img width="550" height="390" src="https://i.ibb.co/8X0H4Gk/Screenshot-from-2020-06-17-15-47-25.png">
-</p>
+<a href="https://ibb.co/ZTMmC8N"><img src="https://i.ibb.co/BsCNRZw/Captura-de-pantalla-de-2020-07-24-11-47-05.png" alt="Captura-de-pantalla-de-2020-07-24-11-47-05" border="0"></a>
 
 3. You can also check the details from all model created, as it can be seen bellow for example for the Account Entity.
 
-<p align="center">
-<img width="550" height="390" src="https://i.ibb.co/sPTBZCS/Screenshot-from-2020-06-17-15-47-41.png">
-</p>
+<a href="https://ibb.co/7XTzydV"><img src="https://i.ibb.co/80RB8L2/Captura-de-pantalla-de-2020-07-24-11-49-09.png" alt="Captura-de-pantalla-de-2020-07-24-11-49-09" border="0"></a>
 
 ## <a name="test-coverage"></a>Test Coverage
 * In the **Java Program** in IntelliJ our test coverage is displayed below by services: 
