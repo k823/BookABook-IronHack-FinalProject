@@ -172,6 +172,6 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 <a href="https://ibb.co/K9RFzxN"><img src="https://i.ibb.co/Vvr2pYH/Captura-de-pantalla-de-2020-07-24-18-37-46.png" alt="Captura-de-pantalla-de-2020-07-24-18-37-46" border="0"></a>
 
-<a href="https://ibb.co/fHGShwQ"><img src="https://i.ibb.co/vkvB7nD/Captura-de-pantalla-de-2020-07-24-18-37-35.png" alt="Captura-de-pantalla-de-2020-07-24-18-37-35" border="0"></a><br /><a target='_blank' href='https://imgbb.com/'>editar img</a><br />
+<a href="https://ibb.co/fHGShwQ"><img src="https://i.ibb.co/vkvB7nD/Captura-de-pantalla-de-2020-07-24-18-37-35.png" alt="Captura-de-pantalla-de-2020-07-24-18-37-35" border="0"></a><br /><a target='_blank' href='https://imgbb.com/'></a><br />
 
-Thanks! :D
+**Thanks! :D**
