@@ -71,11 +71,11 @@ If you are making the requests through Postman, you must set Authorization Type 
 
 ## <a name="documentation"></a>Documentation
 
-1. When you enter [THIS LINK](http://localhost:8080/swagger-ui.html) you'll find the following configuration, where all models specifications are displayed and the routes of the requests with their own specifications as well.
+1. When you enter [THIS LINK](https://edge-bookabook.herokuapp.com/swagger-ui.html#/) you'll find the following configuration, where all models specifications are displayed and the routes of the requests with their own specifications as well.
 
 <a href="https://ibb.co/HVVk0q8"><img src="https://i.ibb.co/BttSmBM/Captura-de-pantalla-de-2020-07-24-11-46-55.png" alt="Captura-de-pantalla-de-2020-07-24-11-46-55" border="0"></a>
 
-2. You can see each Request's details, for example for creating a new SalesRep, we can just pass the values desired into their respective place and you can create a new SalesRep, as it can be seen bellow.
+2. You can see each Request's details, for example for creating a new Account, we can just pass the values desired into their respective place and you can create it, as it can be seen bellow.
 
 <a href="https://ibb.co/ZTMmC8N"><img src="https://i.ibb.co/BsCNRZw/Captura-de-pantalla-de-2020-07-24-11-47-05.png" alt="Captura-de-pantalla-de-2020-07-24-11-47-05" border="0"></a>
 
