@@ -106,13 +106,22 @@ All routes have been tested and can be checked either with Postman or Swagger.
 
 ## <a name="deployment"></a><strong>Deployment</strong>
 
-The whole application has been deployed in Heroku and is fully working. 
+The whole application backend has been deployed in Heroku and is fully working. 
 
 You can access all endpoints in: https://edge-bookabook.herokuapp.com/
 
 <a href="https://ibb.co/kMxX90P"><img src="https://i.ibb.co/FnKz0Jd/Desktop-2.png" alt="Desktop-2" border="0"></a>
 
 <a href="https://ibb.co/FDGzjrJ"><img src="https://i.ibb.co/6W6FfMb/Captura-de-pantalla-de-2020-07-24-11-35-08.png" alt="Captura-de-pantalla-de-2020-07-24-11-35-08" border="0"></a>
+
+Also, the Angular frontend has been deployed in Google Firebase and is fully functional. 
+
+You can access the app in the following route: 
+
+https://bookabook-7ab98.web.app/login
+
+<a href="https://ibb.co/Fz6VrPQ"><img src="https://i.ibb.co/tDBXGd0/Captura-de-pantalla-de-2020-07-24-12-33-05.png" alt="Captura-de-pantalla-de-2020-07-24-12-33-05" border="0"></a>
+
 
 ## <a name="angular"></a>Angular
 # BookABook
@@ -142,3 +151,4 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
